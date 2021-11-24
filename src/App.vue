@@ -3,18 +3,24 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Header></Header>
+    <Main></Main>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import Header from "./components/Header.vue"
+import Main from "./components/Main.vue"
+import Footer from "./components/Footer.vue"
 
 export default {
   name: 'App',
   components: {
     // HelloWorld
     Header,
+    Main,
+    Footer
     
   }
 }
@@ -29,4 +35,6 @@ export default {
 //   color: #2c3e50;
 //   margin-top: 60px;
 // }
+@import "~bootstrap/scss/bootstrap";
+@import "./src/styles/utilities.scss";
 </style>

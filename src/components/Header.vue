@@ -1,97 +1,68 @@
 <template>
-    <div>
-        <div class="my-navbar">
-          <div class="logo-container">
-             <img src="../assets/white-logo-2.png" alt=""> 
-          </div>
+    <div class="header-container">
+      <Navbar></Navbar>
 
-          <div>
-              <ul>
-                  <li>
-                      <a href="#">Home</a>
-                  </li>
-                  <li>
-                      <a href="#">Abouts</a>
-                  </li>
-                  <li>
-                      <a href="#">Services</a>
-                  </li>
-                  <li>
-                      <a href="#">Blog</a>
-                  </li>
-                  <li>
-                      <a href="#">Contact</a>
-                  </li>
-                   <li>
-                      <a href="#">Portfolio</a>
-                  </li>
-                  <button>Sign up</button>
-                  
-                  
-                </ul>
-          </div>
-          
-          
-        </div>
+      <div class="row my-2 align-items-center jumbo">
+          <div class="col title-jumbo">
+              <h1>
+                 <strong>Business Planning</strong><br>
+                 Digital Technology <br>
+                 <strong>modern Solution</strong>
 
-      <div>
+              </h1>
+              <p>
+                  When, while the lovely valley seems with vapour around <br> mean the meridian sun strikes the upper surface.
+              </p>
+              <button class="my-button-secondary ">
+                  Try it Now
+              </button>
+              <button class="my-button-primary mx-3">
+                  Explore more
+              </button>
+
+          </div>
+          <div class="col img-jumbo">
+              <img class="w-100" src="@/assets/header.png" alt="">
+          </div>
 
       </div>
+
+
     </div>
 </template>
 
 <script>
-export default {
+import Navbar from "./Navbar.vue"
 
+export default {
+name:"Header",
+components:{
+    Navbar,
+}
 }
 </script>
 
 <style lang="scss">
-    @import "~bootstrap/scss/bootstrap";
+    .header-container{
+        background: linear-gradient(90deg, rgba(1,17,52,1) 29%, rgba(0,32,102,1) 100%);
+        color: white;
+       
+        .jumbo{
+            width: 90%;
+            margin: auto;
 
-    .logo-container{
-        min-width: 200px;
-        padding:15px 0px;
-    }
-
-    .my-navbar{
-        display: flex;
-        justify-content: space-around;
-        background-color: blue;
-        align-items: center;
-        ul{
-            margin: 0;
-            li{
-                display: inline;
-                list-style: none;
-                text-decoration:none;
-                align-items: center;
-                padding: 0px 10px;
-
-                a{
-                    text-decoration:none;
-                    color: white;
-                     
-                    &:hover{
-                        color:red;
-                        font-weight: bold;
-                    }
-
+            .title-jumbo{
+                p{
+                    font-size: 12px;
                 }
-                
-               
-            
             }
-            button{
-                border-radius: 20px;
-                background-color: lightblue;
-                color:white;
-                padding: 5px 15px;
-                border: none;
-            
-            
-            }
-        }
 
-     }
+            .img-jumbo{
+                width: 500px;
+                margin-bottom: 100px;
+            }
+        }   
+
+       
+    }
 </style>
